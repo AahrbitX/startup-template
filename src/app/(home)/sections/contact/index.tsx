@@ -1,10 +1,12 @@
 import Button from "@/components/atoms/Button";
 import { IconCircle } from "@tabler/icons-react";
 import React from "react";
+import { Dialog } from "@/components/molecules/dialog";
+import { EmailForm } from "@/components/molecules/email-form";
 
 function ContactSection() {
   return (
-    <div className="h-100  md:h-150 px-3 my-18">
+    <div className="h-100 md:h-150 px-3 my-18">
       <div className="max-w-7xl w-full h-full bg-primary mx-auto rounded-b-[80px] flex items-center justify-evenly flex-col">
         <div className="flex w-full px-10 items-center gap-8">
           <div className="w-full h-[1px] bg-neutral-400/70" />
@@ -18,7 +20,14 @@ function ContactSection() {
           <br /> Your Ideas
         </h2>
         <div className="flex items-center justify-center gap-12">
-          <Button className="scale-110 md:scale-120">Talks Now</Button>
+          <Dialog
+            trigger={
+              <Button className="scale-110 md:scale-120">Talks Now</Button>
+            }
+            animationStyle="from-bottom"
+          >
+            <EmailForm />
+          </Dialog>
           <Button className="scale-110 md:scale-120" variant="outline">
             Follow Us
           </Button>

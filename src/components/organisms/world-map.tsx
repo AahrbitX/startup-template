@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import DottedMap from "dotted-map";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useRef } from "react";
 
 interface MapProps {

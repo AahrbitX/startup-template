@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { IconCancel, IconMenu } from "@tabler/icons-react";
+import { SideMenuBtn } from "../molecules/menu-button";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,16 +32,10 @@ const Navbar = () => {
           </div>
 
           <div className="flex md:hidden">
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-neutral-400 hover:text-white"
-            >
-              {isMobileMenuOpen ? (
-                <IconCancel className="h-6 w-6" />
-              ) : (
-                <IconMenu className="h-6 w-6" />
-              )}
-            </button>
+            <SideMenuBtn
+              crossed={isMobileMenuOpen}
+              setCrossedState={setIsMobileMenuOpen}
+            />
           </div>
         </div>
       </div>

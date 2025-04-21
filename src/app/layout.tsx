@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Geist, Geist_Mono, MuseoModerno, Zen_Dots } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/organisms/navigation";
 
@@ -14,8 +13,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const zenDots = localFont({
-  src: "../assets/ZenDots.ttf",
+const MuseoModernoFont = MuseoModerno({
+  variable: "--font-museo",
+  subsets: ["latin"],
+});
+
+const zenDots = Zen_Dots({
+  weight: "400",
+  subsets: ["latin"],
   variable: "--font-zen-dots",
 });
 
@@ -32,7 +37,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${zenDots.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${zenDots.variable} ${MuseoModernoFont.variable} antialiased`}
       >
         <Navbar />
         {children}

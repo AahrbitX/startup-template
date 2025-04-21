@@ -1,7 +1,6 @@
-import { Badge } from "@/components/atoms/badgen";
+import { Badge } from "@/components/atoms/badge";
 import SectionHeading from "@/components/molecules/section-heading";
 import {
-  IconAbacus,
   IconApps,
   IconBrandMedium,
   IconHeartHandshake,
@@ -9,13 +8,14 @@ import {
   IconWorld,
 } from "@tabler/icons-react";
 import React from "react";
-import VelocityText from "./velocity-text";
-import ServiceCards from "./service-cards";
+import ScrollText from "./scroll-text";
+import { FeaturesSection } from "./features";
 
 function Service() {
   return (
-    <section className="min-h-vh flex flex-col ">
-      <VelocityText />
+    <section className="flex flex-col h-fit">
+      <ScrollText />
+
       <div className="flex-1 p-2 md:p-5 lg:p-10 flex flex-col mx-auto max-w-7xl">
         <div
           id="services"
@@ -29,7 +29,7 @@ function Service() {
             </p>
           </div>
           <div className="w-full flex items-center justify-start gap-2 flex-wrap">
-            <Badge Icon={IconWorld} text="Digital" />
+            <Badge active Icon={IconWorld} text="Digital" />
             <Badge Icon={IconBrandMedium} text="Branding" />
             <Badge Icon={IconApps} text="Design" />
             <Badge Icon={IconApps} text="Development" />
@@ -38,7 +38,7 @@ function Service() {
             <Badge Icon={IconWorld} text="Consulting" />
           </div>
         </div>
-        <ServiceCards />
+        <FeaturesSection />
       </div>
     </section>
   );

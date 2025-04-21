@@ -1,8 +1,7 @@
 "use client";
-import { motion } from "framer-motion";
 import WorldMap from "@/components/organisms/world-map";
 
-export function WorldMapBlock() {
+export default function WorldMapBlock() {
   return (
     <div className=" py-10  w-full">
       <WorldMap

@@ -183,10 +183,10 @@ const SkeletonFour = () => {
     >
       <motion.div
         variants={first}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-neutral-900 dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/user_avatar.png"
           alt="avatar"
           height="100"
           width="100"
@@ -195,13 +195,13 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Just code in Vanilla Javascript
         </p>
-        <p className="border border-red-500 bg-red-100 dark:bg-red-900/20 text-red-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-red-400 bg-red-100 dark:bg-red-900/20 text-red-300 text-xs rounded-full px-2 py-0.5 mt-4">
           Delusional
         </p>
       </motion.div>
-      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
+      <motion.div className="h-full relative z-20 w-1/3 rounded-2xl bg-white p-4 dark:bg-neutral-900 dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center">
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/user_avatar.png"
           alt="avatar"
           height="100"
           width="100"
@@ -210,16 +210,16 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           Tailwind CSS is cool, you know
         </p>
-        <p className="border border-green-500 bg-green-100 dark:bg-green-900/20 text-green-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-green-400 bg-green-100 dark:bg-green-900/20 text-green-300 text-xs rounded-full px-2 py-0.5 mt-4">
           Sensible
         </p>
       </motion.div>
       <motion.div
         variants={second}
-        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-black dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
+        className="h-full w-1/3 rounded-2xl bg-white p-4 dark:bg-neutral-900 dark:border-white/[0.1] border border-neutral-200 flex flex-col items-center justify-center"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/user_avatar.png"
           alt="avatar"
           height="100"
           width="100"
@@ -228,7 +228,7 @@ const SkeletonFour = () => {
         <p className="sm:text-sm text-xs text-center font-semibold text-neutral-500 mt-4">
           I love angular, RSC, and Redux.
         </p>
-        <p className="border border-orange-500 bg-orange-100 dark:bg-orange-900/20 text-orange-600 text-xs rounded-full px-2 py-0.5 mt-4">
+        <p className="border border-orange-400 bg-orange-100 dark:bg-orange-900/20 text-orange-300 text-xs rounded-full px-2 py-0.5 mt-4">
           Helpless
         </p>
       </motion.div>
@@ -272,7 +272,7 @@ const SkeletonFive = () => {
         className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
+          src="/user_avatar.png"
           alt="avatar"
           height="100"
           width="100"

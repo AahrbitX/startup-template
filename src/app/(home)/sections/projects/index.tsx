@@ -16,6 +16,7 @@ function ProjectsSection() {
           <TextAnimate
             as={"p"}
             animation="blurIn"
+            once
             className="text-gray-500 font-mono  w-[378px] text-balance text-center px-4"
             delay={0.4}
           >

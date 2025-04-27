@@ -9,8 +9,8 @@ function Section2() {
   return (
     <div className="md:px-4 lg:px-8 mt-10 relative md:mt-5 lg:mt-0 h-full">
       <motion.div
-        initial={{ x: -120, rotate: -720 }}
-        animate={{ x: 0, rotate: 0 }}
+        initial={{ x: -120, rotate: -720, opacity: 0 }}
+        animate={{ x: 0, rotate: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="bg-neutral-900 inline-block rounded-full p-4 md:p-5 absolute right-18 md:right-28 -top-8 md:-top-10 border-4"
       >

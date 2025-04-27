@@ -1,57 +1,16 @@
 "use client";
 
+import { cn } from "@/lib/cn";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { cn } from "@/lib/cn";
-
-interface Project {
-  id: number;
-  title: string;
-  description: string;
-  order: string;
-  colSpan?: number;
-  rounded?: string;
-  className?: string;
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    title: "Project 1",
-    description: "Description for Project 1",
-    order: "order-1",
-  },
-  {
-    id: 2,
-    title: "Project 2",
-    description: "Description for Project 2",
-    order: "order-3 md:order-2",
-    colSpan: 2,
-    className: "col-span-2",
-  },
-  {
-    id: 3,
-    title: "Project 3",
-    description: "Description for Project 3",
-    order: "order-2 md:order-3",
-  },
-  {
-    id: 4,
-    title: "Project 4",
-    description: "Description for Project 4",
-    order: "order-4",
-  },
-  {
-    id: 5,
-    title: "Project 5",
-    description: "Description for Project 5",
-    order: "order-5",
-    rounded: "rounded-br-[80px]",
-  },
-];
+import { unstable_ViewTransition as ViewTransition } from "react";
+import { useRouter } from "next/navigation";
+import { projects, type Project } from "@/data/projects";
 
 function ProjectsGallery() {
   const [activeProject, setActiveProject] = useState<Project | null>(null);
+
+  const router = useRouter();
 
   return (
     <div className="flex-1 w-full h-full max-w-7xl mx-auto mb-8 px-1">
@@ -99,23 +58,30 @@ function ProjectsGallery() {
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[999]"
             onClick={() => setActiveProject(null)}
           >
-            <motion.div
-              layoutId={`project-${activeProject.id}`}
-              className="max-w-4xl w-full bg-white rounded-2xl overflow-hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <motion.img
-                src={`/projects/project-${activeProject.id}.jpg`}
-                alt={activeProject.title}
-                className="w-full h-[200px]  md:h-[300px]  lg:h-[450px] object-cover"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl text-neutral-900 font-bold mb-2">
-                  {activeProject.title}
-                </h2>
-                <p className="text-neutral-700">{activeProject.description}</p>
-              </div>
-            </motion.div>
+            <ViewTransition name="project-image">
+              <motion.div
+                layoutId={`project-${activeProject.id}`}
+                className="max-w-4xl w-full bg-white rounded-2xl overflow-hidden  cursor-pointer"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  router.push(`/projects/${activeProject.link}`);
+                }}
+              >
+                <motion.img
+                  src={`/projects/project-${activeProject.id}.jpg`}
+                  alt={activeProject.title}
+                  className="w-full h-[200px]  md:h-[300px]  lg:h-[450px] object-cover"
+                />
+                <div className="p-6">
+                  <h2 className="text-2xl text-neutral-900 font-bold mb-2">
+                    {activeProject.title}
+                  </h2>
+                  <p className="text-neutral-700">
+                    {activeProject.small_description}
+                  </p>
+                </div>
+              </motion.div>
+            </ViewTransition>
           </motion.div>
         )}
       </AnimatePresence>

@@ -13,7 +13,7 @@ export default function MeteorsCard({
   buttonLabel = "Explore",
 }: MeteorsCardProps) {
   return (
-    <div className="w-full px-4 py-8">
+    <div className="w-full px-4 py-8 group">
       <div className="relative w-full">
         <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-gradient-to-r from-primary to-slate-500 blur-3xl" />
         <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 px-6 py-8 shadow-xl">
@@ -24,7 +24,7 @@ export default function MeteorsCard({
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="h-2 w-2 text-gray-300"
+              className="h-2 w-2 text-gray-300 group-hover:rotate-360 duration-500 ease-in-out"
             >
               <path
                 strokeLinecap="round"

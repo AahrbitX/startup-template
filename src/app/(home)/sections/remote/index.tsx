@@ -16,6 +16,7 @@ function RemoteSection() {
         <TextAnimate
           as={"p"}
           delay={0.4}
+          once
           animation="blurIn"
           className="text-gray-500 font-mono min-w-[390px] text-balance text-center px-4"
         >

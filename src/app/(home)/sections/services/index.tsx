@@ -32,6 +32,7 @@ function Service() {
                 delay={0.4}
                 as={"p"}
                 animation="blurIn"
+                once
                 className="text-zinc-600 leading-5 lg:text-lg text-justify mt-6 max-w-130 font-mono"
               >
                 Every One of us loves something different, so explore the world

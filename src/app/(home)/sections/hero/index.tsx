@@ -33,7 +33,15 @@ function Hero() {
               </TextAnimate>
             </h1>
             <div className="md:pl-6 lg:pl-0 w-full md:w-fit lg:mt-8">
-              <div>
+              <motion.div
+                initial={{ x: "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: "100%", opacity: 0 }}
+                transition={{
+                  duration: 0.8,
+                  ease: "easeOut",
+                }}
+              >
                 <HeroVideoDialog
                   videoSrc="https://www.youtube.com/embed/dQw4w9WgXcQ"
                   animationStyle="from-center"
@@ -53,7 +61,7 @@ function Hero() {
                     </motion.div>
                   </div>
                 </HeroVideoDialog>
-              </div>
+              </motion.div>
               <p className="mt-7 lg:mt-8 md:text-lg font-normal leading-6 text-center md:text-start text-balance max-w-100">
                 <TextAnimate by="line" once={true} as={"span"} duration={1.2}>
                   {`Modern infrastructure to launch your startup.\nOptimized for speed, scale, and success.\nCrafted with performance and elegance in mind.\n`}
@@ -61,11 +69,22 @@ function Hero() {
               </p>
             </div>
           </div>
-          <div className="flex gap-2 items-center justify-center md:justify-start lg:px-6 mb-5 mt-3">
+          <motion.div
+            initial={{ x: "-100%", opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            exit={{ x: "-100%", opacity: 0 }}
+            transition={{
+              duration: 0.8,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true, amount: 0.2 }}
+            id="hero-badges"
+            className="flex gap-2 items-center justify-center md:justify-start lg:px-6 mb-5 mt-3"
+          >
             <HeroBadge Icon={IconTrophy} text="Best Brand of the Year" />
             <HeroBadge Icon={IconAward} text="Best Selling Product" />
             <div className="bg-neutral-500/20 h-0.5 w-full flex-1 ml-5 hidden md:block" />
-          </div>
+          </motion.div>
         </div>
         <Section2 />
       </div>

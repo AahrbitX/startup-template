@@ -6,6 +6,7 @@ function SectionHeading({ text }: { text: string }) {
     <TextAnimate
       as={"h2"}
       delay={0.4}
+      once
       animation="slideUp"
       className="text-2xl mb-4 lg:text-5xl font-bold uppercase font-heading text-gray-300 tracking-widest"
     >

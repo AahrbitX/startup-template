@@ -13,15 +13,14 @@ const Navbar = () => {
     { label: "Home", href: "/" },
     { label: "About", href: "/#about" },
     { label: "Services", href: "/#services" },
-    { label: "Projects", href: "/#projects" },
+    { label: "Projects", href: "/projects" },
   ];
 
   return (
     <nav className="fixed top-2 z-[1000] w-full my-3">
       <div
         className={cn(
-          "px-4 md:px-8 lg:px-12 max-w-6xl mx-2 lg:mx-auto bg-neutral-800 ",
-          isMobileMenuOpen ? "rounded-t-3xl" : "rounded-3xl"
+          "px-4 md:px-8 lg:px-12 max-w-6xl mx-2 lg:mx-auto bg-neutral-800 rounded-3xl"
         )}
       >
         <div className="flex h-16 items-center justify-between">
@@ -31,7 +30,7 @@ const Navbar = () => {
             </Link>
           </div>
 
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-4 ">
             {links.map(({ label, href }) => (
               <Link key={label} href={href} className="px-3 py-2 text-white">
                 <span className="inline-block">
@@ -55,15 +54,19 @@ const Navbar = () => {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
             transition={{ delay: 0.1, duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden fixed left-0 right-0 top-16 z-50 w-full px-2 md:hidden"
           >
-            <div className="bg-neutral-800 flex flex-col space-y-3 rounded-b-3xl py-4 px-4">
+            <div className="bg-neutral-800 flex flex-col  rounded-b-3xl py-4 px-4">
               {links.map(({ label, href }) => (
-                <Link key={label} href={href} className="px-3 py-2 text-white">
+                <Link
+                  key={label}
+                  href={href}
+                  className="px-3 py-4 text-white border-t border-neutral-300"
+                >
                   {label}
                 </Link>
               ))}

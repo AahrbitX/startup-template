@@ -17,7 +17,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed top-2 z-[1000] w-full my-3">
+    <nav className="fixed z-[1000] w-full my-3">
       <div
         className={cn(
           "px-4 md:px-8 lg:px-12 max-w-6xl mx-2 lg:mx-auto bg-neutral-800 rounded-3xl"

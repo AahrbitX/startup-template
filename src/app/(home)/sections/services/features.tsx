@@ -1,18 +1,37 @@
 import { cn } from "@/lib/cn";
+import { motion, useInView } from "motion/react";
 import { useServices } from "./context";
 import { services } from "./data";
+import { useRef } from "react";
 
 export function FeaturesSection() {
   const { selected: feature } = useServices();
+  const ref = useRef(null);
+  const inView = useInView(ref, {
+    margin: "0px 0px -40px 0px",
+    once: true,
+  });
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 300 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 relative z-10 py-10 max-w-7xl mx-auto min-h-[600px]"
+    >
       {services[feature].map((feature, index) => (
         <Feature key={feature.title} {...feature} index={index} />
       ))}
-    </div>
+    </motion.div>
   );
 }
+
+const itemVariants = {
+  hidden: { opacity: 0, scale: 0.5 },
+  visible: { opacity: 1, scale: 1, transition: { duration: 0.3 } },
+  exit: { opacity: 0, scale: 0.5, transition: { duration: 0.3 } },
+};
 
 const Feature = ({
   title,
@@ -26,9 +45,13 @@ const Feature = ({
   index: number;
 }) => {
   return (
-    <div
+    <motion.div
+      variants={itemVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
       className={cn(
-        "flex flex-col lg:border-r  py-10 relative group/feature dark:border-neutral-800",
+        "flex flex-col lg:border-r py-10 relative group/feature dark:border-neutral-800",
         (index === 0 || index === 4) && "lg:border-l dark:border-neutral-800",
         index < 4 && "lg:border-b dark:border-neutral-800"
       )}
@@ -49,6 +72,6 @@ const Feature = ({
       <p className="text-sm text-neutral-600 dark:text-neutral-300 max-w-xs relative z-10 px-10">
         {description}
       </p>
-    </div>
+    </motion.div>
   );
 };

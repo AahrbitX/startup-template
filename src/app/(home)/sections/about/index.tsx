@@ -5,6 +5,7 @@ import { BrowserComponent } from "./mockBrowser";
 import BentoGridBlock from "./BentroGridBlock";
 import SectionHeading from "@/components/molecules/section-heading";
 import { TextAnimate } from "@/components/organisms/text-effect";
+import { Companies } from "./companies";
 
 function AboutSection() {
   return (
@@ -25,7 +26,8 @@ function AboutSection() {
           you are in love with the creative
         </TextAnimate>
       </div>
-      <BrowserComponent></BrowserComponent>
+      <BrowserComponent />
+      <Companies />
       <BentoGridBlock />
     </section>
   );

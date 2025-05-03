@@ -28,7 +28,7 @@ export const BrowserComponent: React.FC<{
   return (
     <div
       className={cn(
-        "relative text-sm dark:text-neutral-400 text-neutral-950 border dark:border-neutral-800 rounded-lg w-full min-h-[600px] dark:shadow-none shadow-lg shadow-gray-200 dark:bg-neutral-950 bg-white",
+        "relative text-sm dark:text-neutral-400 text-neutral-950 border dark:border-neutral-800 rounded-lg w-full min-h-[800px] md:min-h-[600px] dark:shadow-none shadow-lg shadow-gray-200 dark:bg-neutral-950 bg-white",
         className
       )}
     >
@@ -69,9 +69,9 @@ export const BrowserComponent: React.FC<{
       </div>
 
       <div className="p-6 space-y-4">
-        <h4 className="text-3xl md:text-4xl text-center  lg:text-5xl font-semibold capitalize">
+        <h3 className="text-3xl md:text-4xl text-center  lg:text-5xl font-semibold capitalize">
           {section}
-        </h4>
+        </h3>
         <AnimatePresence mode="wait">
           <motion.div
             key={section}

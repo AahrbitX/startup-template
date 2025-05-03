@@ -29,7 +29,7 @@ export default async function ProjectPage(props: ProjectPageProps) {
   }
 
   return (
-    <div className="pt-[124px] max-w-7xl mx-auto px-4">
+    <div className="pt-[114px] max-w-7xl mx-auto px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
         <ViewTransition name="project-image">
           <img

@@ -6,7 +6,7 @@ import SectionHeading from "@/components/molecules/section-heading";
 function ProjectsPage() {
   return (
     <>
-      <section className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-10 items-center justify-center h-screen translate-y-30">
+      <section className="max-w-7xl mx-auto px-4 lg:px-8 flex flex-col gap-10 items-center justify-center translate-y-30">
         <SectionHeading text="Projects Page" />
         <LayoutGrid cards={cards} />
       </section>

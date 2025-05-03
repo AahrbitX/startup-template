@@ -17,7 +17,7 @@ function Hero() {
     >
       <div className="max-w-7xl mx-auto  grid grid-rows-[0.85fr_1fr] h-full w-full">
         <div className=" pt-6 md:pt-13 lg:pt-22">
-          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-8 items-center justify-items-center lg:justify-items-start lg:gap-16 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_0.5fr] gap-4  md:gap-8 items-center justify-items-center lg:justify-items-start lg:gap-16 max-w-7xl mx-auto">
             <HeroText />
             <div className=" lg:mt-8">
               <HeroVideoDialogComp />
@@ -87,7 +87,7 @@ const HeroVideoDialogComp = () => {
 
 const HeroSubText = () => {
   return (
-    <p className="mt-7 lg:mt-8 md:text-lg font-normal leading-6 text-center md:text-start text-balance max-w-100">
+    <p className="mt-7 lg:mt-8 md:text-lg font-normal leading-6 text-center md:text-start text-balance max-w-100  ">
       <TextAnimate by="line" once={true} as={"span"} duration={1.2}>
         {`Modern infrastructure to launch your startup.\nOptimized for speed, scale, and success.\nCrafted with performance and elegance in mind.\n`}
       </TextAnimate>

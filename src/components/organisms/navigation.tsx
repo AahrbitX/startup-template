@@ -17,7 +17,11 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed z-[1000] w-full my-3">
+    <motion.nav
+      initial={{ y: -200 }}
+      animate={{ y: 0 }}
+      className="fixed z-[1000] w-full my-3"
+    >
       <div
         className={cn(
           "px-4 md:px-8 lg:px-12 max-w-6xl mx-2 lg:mx-auto bg-neutral-800 rounded-3xl"
@@ -58,7 +62,7 @@ const Navbar = () => {
             animate={{ height: "auto" }}
             exit={{ height: 0 }}
             transition={{ delay: 0.1, duration: 0.3, ease: "easeInOut" }}
-            className="overflow-hidden fixed left-0 right-0 top-16 z-50 w-full px-2 md:hidden"
+            className="overflow-hidden fixed left-0 right-0 top-13 z-50 w-full px-2 md:hidden"
           >
             <div className="bg-neutral-800 flex flex-col  rounded-b-3xl py-4 px-4">
               {links.map(({ label, href }) => (
@@ -74,7 +78,7 @@ const Navbar = () => {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </motion.nav>
   );
 };
 

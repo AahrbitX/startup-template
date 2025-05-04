@@ -26,7 +26,7 @@ html {
 }
 
 body {
-  background: var(--color-neutral-900);
+  background: var(--color-foreground);
   color: var(--color-zinc-200);
   @apply font-sans overflow-x-hidden;
 }

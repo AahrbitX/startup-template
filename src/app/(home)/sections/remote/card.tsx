@@ -16,7 +16,7 @@ export default function MeteorsCard({
     <div className="w-full px-4 py-8 group">
       <div className="relative w-full">
         <div className="absolute inset-0 h-full w-full scale-[0.80] transform rounded-full bg-gradient-to-r from-primary to-slate-500 blur-3xl" />
-        <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900 px-6 py-8 shadow-xl">
+        <div className="relative flex h-full flex-col items-start justify-end overflow-hidden rounded-2xl border border-neutral-800 bg-foreground px-6 py-8 shadow-xl">
           <div className="mb-4 flex h-5 w-5 items-center justify-center rounded-full border border-gray-500">
             <svg
               xmlns="http://www.w3.org/2000/svg"

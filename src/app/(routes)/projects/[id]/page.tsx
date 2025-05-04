@@ -38,7 +38,6 @@ export default async function ProjectPage(props: ProjectPageProps) {
             className="w-full h-[300px] lg:h-[500px] object-cover rounded-2xl"
           />
         </ViewTransition>
-
         <ProjectDesc project={project} />
       </div>
       <div className="w-full my-10">

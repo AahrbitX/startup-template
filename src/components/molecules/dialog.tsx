@@ -113,14 +113,14 @@ export function Dialog({
               {...selectedAnimation}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
               className={cn(
-                "relative mx-4 w-full overflow-hidden rounded-xl bg-white p-6 shadow-2xl dark:bg-neutral-900",
+                "relative mx-4 w-full overflow-hidden rounded-xl p-6 shadow-2xl bg-foreground",
                 maxWidth
               )}
               onClick={(e) => e.stopPropagation()}
             >
               {showCloseButton && (
                 <motion.button
-                  className="absolute right-4 top-4 rounded-full bg-neutral-200/80 p-2 text-neutral-700 ring-1 ring-neutral-300 backdrop-blur-md hover:bg-neutral-300/90 dark:bg-neutral-800/80 dark:text-neutral-300 dark:ring-neutral-700 dark:hover:bg-neutral-700/90"
+                  className="absolute right-4 top-4 rounded-full  p-2  ring-1  backdrop-blur-md  bg-neutral-800/80 text-neutral-300 ring-neutral-700 hover:bg-neutral-700/90"
                   onClick={handleClose}
                 >
                   <IconX className="size-5" />

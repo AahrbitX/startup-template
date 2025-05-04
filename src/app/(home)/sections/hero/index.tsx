@@ -12,7 +12,7 @@ import { TextAnimate } from "@/components/organisms/text-effect";
 function Hero() {
   return (
     <section
-      className="scroll-mt-16 bg-primary h-svh text-neutral-900 px-2 pt-16 md:pt-8 lg:pt-0 flex-1"
+      className="scroll-mt-16 bg-primary h-svh text-foreground px-2 pt-16 md:pt-8 lg:pt-0 flex-1"
       id="hero-section"
     >
       <div className="max-w-7xl mx-auto  grid grid-rows-[0.85fr_1fr] h-full w-full">

@@ -45,13 +45,13 @@ function ProjectDesc({ project }: { project: Project }) {
       <div className="mt-4 flex gap-4 items-center justify-center">
         <button
           onClick={() => {}}
-          className="w-full bg-primary py-2 rounded-md text-neutral-900 hover:bg-primary/80 transition-colors duration-200 flex items-center justify-center gap-2"
+          className="w-full bg-primary py-2 rounded-md text-foreground hover:bg-primary/80 transition-colors duration-200 flex items-center justify-center gap-2"
         >
           <IconBrandGithub className="size-4" /> View Code
         </button>
         <button
           onClick={() => {}}
-          className="w-full bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200 py-2 rounded-md text-primary *:hover:text-neutral-900 flex items-center justify-center gap-2"
+          className="w-full bg-neutral-800 hover:bg-neutral-700 transition-colors duration-200 py-2 rounded-md text-primary flex items-center justify-center gap-2"
         >
           <IconExternalLink className="size-4" /> Demo
         </button>

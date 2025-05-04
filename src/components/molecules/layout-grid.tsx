@@ -36,10 +36,8 @@ const ImageComponent = ({ card }: { card: Card }) => {
   return (
     <Link href={`/projects/${card.link}`}>
       <ViewTransition name="project-image">
-        <motion.img
+        <img
           src={card.thumbnail}
-          height="500"
-          width="500"
           className={cn(
             "object-cover   absolute inset-0 h-full w-full transition duration-200"
           )}

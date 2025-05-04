@@ -58,30 +58,30 @@ function ProjectsGallery() {
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[999]"
             onClick={() => setActiveProject(null)}
           >
-            <ViewTransition name="project-image">
-              <motion.div
-                layoutId={`project-${activeProject.id}`}
-                className="max-w-4xl w-full bg-white rounded-2xl overflow-hidden  cursor-pointer"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  router.push(`/projects/${activeProject.link}`);
-                }}
-              >
+            <motion.div
+              layoutId={`project-${activeProject.id}`}
+              className="max-w-4xl w-full bg-white rounded-2xl overflow-hidden  cursor-pointer"
+              onClick={(e) => {
+                e.stopPropagation();
+                router.push(`/projects/${activeProject.link}`);
+              }}
+            >
+              <ViewTransition name="project-image">
                 <motion.img
                   src={`/projects/project-${activeProject.id}.jpg`}
                   alt={activeProject.title}
                   className="w-full h-[200px]  md:h-[300px]  lg:h-[450px] object-cover"
                 />
-                <div className="p-6">
-                  <h2 className="text-2xl text-neutral-900 font-bold mb-2">
-                    {activeProject.title}
-                  </h2>
-                  <p className="text-neutral-700">
-                    {activeProject.small_description}
-                  </p>
-                </div>
-              </motion.div>
-            </ViewTransition>
+              </ViewTransition>
+              <div className="p-6">
+                <h2 className="text-2xl text-foreground font-bold mb-2">
+                  {activeProject.title}
+                </h2>
+                <p className="text-neutral-700">
+                  {activeProject.small_description}
+                </p>
+              </div>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>

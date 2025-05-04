@@ -28,7 +28,7 @@ export const BrowserComponent: React.FC<{
   return (
     <div
       className={cn(
-        "relative text-sm dark:text-neutral-400 text-neutral-950 border dark:border-neutral-800 rounded-lg w-full min-h-[800px] md:min-h-[600px] dark:shadow-none shadow-lg shadow-gray-200 dark:bg-neutral-950 bg-white",
+        "relative text-sm text-neutral-400  border border-neutral-800 rounded-lg w-full min-h-[800px] md:min-h-[600px] shadow-none shadow-gray-200 bg-neutral-950",
         className
       )}
     >
@@ -54,7 +54,7 @@ export const BrowserComponent: React.FC<{
             viewBox="0 0 24 24"
             fill="none"
             strokeWidth="2"
-            className={"dark:stroke-neutral-700 stroke-neutral-300 w-4 max-w-5"}
+            className={"stroke-neutral-700 w-4 max-w-5"}
             strokeLinecap="round"
             strokeLinejoin="round"
           >
